@@ -2120,7 +2120,7 @@ SQLRETURN ODBCConnection::BindColumns(QueryData *data) {
       case SQL_WCHAR:
       case SQL_WVARCHAR:
       case SQL_WLONGVARCHAR:
-        column->buffer_size = (column->ColumnSize + 1) * sizeof(SQLWCHAR);
+        column->buffer_size = 1024; // (column->ColumnSize + 1) * sizeof(SQLWCHAR);
         column->bind_type = SQL_C_WCHAR;
         data->boundRow[i] = new SQLWCHAR[column->buffer_size]();
         break;
