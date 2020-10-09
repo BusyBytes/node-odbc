@@ -34,7 +34,7 @@
     "node": ">=8.16.0"
   },
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build",
+    "install": "node-pre-gyp install --build-from-source",
     "test": "mocha --slow 5000 --timeout 10000"
   },
   "dependencies": {
